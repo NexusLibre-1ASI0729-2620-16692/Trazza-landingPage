@@ -334,6 +334,7 @@ footer[id] {
     min-width: 96px;
     padding: 0 16px;
 }
+
 .burger-menu {
     display: none;
     width: 44px;
@@ -1139,6 +1140,7 @@ html[lang="es"] .nav-links { gap: 22px; }
 @media (max-width: 1240px) {
     .container { padding: 0 40px; }
 
+
     .nav-tools { margin-left: auto; }
     .nav-signin { display: none; }
     .burger-menu { display: inline-flex; }
@@ -1212,7 +1214,6 @@ html[lang="es"] .nav-links { gap: 22px; }
     .mobile-only { display: inline; }
 
     .nav-menu { padding: 24px 20px; }
-
     /* Hero */
     .hero { padding: 32px 0 32px; }
     .hero-visual { display: none; }
