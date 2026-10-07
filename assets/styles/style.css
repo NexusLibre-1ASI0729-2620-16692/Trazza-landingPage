@@ -481,6 +481,7 @@ footer[id] {
     gap: 12px;
     margin-top: 22px;
 }
+
 .avatar {
     flex-shrink: 0;
     width: 40px;
@@ -498,6 +499,7 @@ footer[id] {
     width: 44px;
     height: 44px;
 }
+
 .load-merchant-info {
     flex: 1;
     display: flex;
