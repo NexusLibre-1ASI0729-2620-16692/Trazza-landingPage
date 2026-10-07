@@ -335,6 +335,31 @@ footer[id] {
     padding: 0 16px;
 }
 
+.burger-menu {
+    display: none;
+    width: 44px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4.5px;
+}
+.burger-menu span {
+    display: block;
+    width: 20px;
+    height: 2.5px;
+    border-radius: 1px;
+    background-color: var(--text-dark);
+    transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.burger-menu.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger-menu.is-open span:nth-child(2) { opacity: 0; }
+.burger-menu.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 .hero {
     background-color: var(--bg-light);
     padding: 70px 0 92px;
