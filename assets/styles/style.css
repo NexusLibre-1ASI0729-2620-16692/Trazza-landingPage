@@ -359,127 +359,12 @@ footer[id] {
 .burger-menu.is-open span:nth-child(2) { opacity: 0; }
 .burger-menu.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-.hero {
-    background-color: var(--bg-light);
-    padding: 70px 0 92px;
-}
-.hero-container {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 470px;
-    gap: 60px;
-    align-items: start;
-}
-.hero-content {
-    padding-top: 10px;
-}
-.tag-label {
-    display: inline-flex;
-    align-items: center;
-    height: 30px;
-    padding: 0 14px;
-    border-radius: 15px;
-    background-color: var(--primary-tint);
-    color: var(--primary);
-    font-size: 12px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-.hero-title {
-    font-size: 56px;
-    line-height: 66px;
-    letter-spacing: -0.5px;
-    margin-bottom: 16px;
-}
-.hero-title span {
-    color: var(--primary);
-}
-.hero-desc {
-    font-size: 18px;
-    line-height: 28px;
-    color: var(--text-body);
-    max-width: 560px;
-    margin-bottom: 16px;
-}
-.hero-actions {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 28px;
-}
-.trust-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.trust-chip {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    height: 32px;
-    padding: 0 14px 0 8px;
-    border-radius: 16px;
-    border: 1px solid var(--border-color);
-    background-color: var(--white);
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-dark);
-}
-.trust-chip .check-dot {
-    width: 16px;
-    height: 16px;
-}
 
-/* Hero card */
-.load-card {
-    background-color: var(--white);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    box-shadow: var(--shadow-card);
-    padding: 20px 24px 16px;
-}
-.load-card-head {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 14px;
-}
-.load-card-head h2 {
-    font-size: 15px;
-}
-.route-map {
-    position: relative;
-    height: 190px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    background-color: var(--map-bg);
-    overflow: hidden;
-}
-.route-map svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-.route-label {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 22px;
-    padding: 0 8px;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 4px;
-    border: 1px solid var(--border-color);
-    background-color: var(--white);
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--text-body);
-}
-.load-merchant {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 22px;
-}
+
+
+
+
+
 .avatar {
     flex-shrink: 0;
     width: 40px;
@@ -497,58 +382,10 @@ footer[id] {
     width: 44px;
     height: 44px;
 }
-.load-merchant-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-}
-.load-merchant-info strong {
-    font-size: 15px;
-    color: var(--text-dark);
-}
-.load-merchant-info span {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text-body);
-}
-.load-rate {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    line-height: 1.15;
-}
-.load-rate strong {
-    font-size: 24px;
-    color: var(--green);
-}
-.load-rate span {
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--text-body);
-}
-.divider {
-    border: none;
-    border-top: 1px solid var(--border-soft);
-    margin: 16px 0 14px;
-}
-.load-route {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 8px;
-}
-.load-card-foot {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-.load-card-foot .btn {
-    width: 120px;
-    padding: 0;
-    font-size: 13px;
-}
+
+
+
+
 
 .section {
     padding: 72px 0;
