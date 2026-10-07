@@ -290,6 +290,51 @@ footer[id] {
 .lang-switch--dark button { color: var(--on-primary-muted); }
 .lang-switch--dark button.is-active { color: var(--white); }
 
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--header-h);
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-soft);
+}
+.nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 64px;
+}
+.nav-links {
+    display: flex;
+    gap: 34px;
+}
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: var(--primary);
+}
+.nav-signin-mobile {
+    display: none;
+}
+.nav-tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.nav-signin {
+    min-width: 96px;
+    padding: 0 16px;
+}
+
 .hero {
     background-color: var(--bg-light);
     padding: 70px 0 92px;
