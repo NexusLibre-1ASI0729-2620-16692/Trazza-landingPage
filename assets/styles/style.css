@@ -257,6 +257,39 @@ footer[id] {
 .logo--light .brand { color: var(--white); }
 .logo--light .slogan { color: var(--on-primary-muted); }
 
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    height: 32px;
+    padding: 0 14px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    font-size: 12px;
+    color: var(--text-body);
+}
+.lang-switch button {
+    background: none;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-body);
+    cursor: pointer;
+    padding: 0 2px;
+}
+.lang-switch button.is-active {
+    font-weight: 700;
+    color: var(--text-dark);
+}
+.lang-switch--dark {
+    background: none;
+    border-color: var(--white);
+    color: var(--on-primary-muted);
+}
+.lang-switch--dark button { color: var(--on-primary-muted); }
+.lang-switch--dark button.is-active { color: var(--white); }
+
 .hero {
     background-color: var(--bg-light);
     padding: 70px 0 92px;
