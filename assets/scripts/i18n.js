@@ -3,9 +3,11 @@
     const SUPPORTED = ['en', 'es'];
 
     const es = {
+        
         'meta.title': 'Trazza – Fletes de retorno para Lima',
         'meta.description': 'Trazza conecta a transportistas que regresan con espacio libre con pequeñas y medianas empresas que necesitan enviar mercadería por Lima.',
 
+        
         'logo.home': 'Inicio de Trazza',
         'nav.how': 'Cómo funciona',
         'nav.carriers': 'Para transportistas',
@@ -18,6 +20,26 @@
         'menu.open': 'Abrir menú',
         'menu.close': 'Cerrar menú',
 
+        
+        'hero.tag': 'FLETES DE RETORNO PARA LIMA',
+        'hero.title': '¿Tu camión<br> regresa <span>vacío?</span>',
+        'hero.desc': 'Trazza conecta a transportistas que regresan con espacio libre con pequeñas y medianas empresas que necesitan enviar mercadería por Lima. <span class="desktop-only">Publica tu ruta de retorno, recibe cargas compatibles y sigue cada envío en tiempo real.</span>',
+        'cta.carrier': 'Soy transportista',
+        'cta.merchant': 'Soy comerciante',
+        'trust.commission': 'Sin comisión por viaje',
+        'trust.dni': 'Transportistas verificados con DNI',
+        'trust.tracking': 'Seguimiento en vivo',
+
+        
+        'card.aria': 'Ejemplo de una sugerencia de carga',
+        'card.title': 'Sugerencia de carga para tu retorno',
+        'card.new': 'Nuevo',
+        'card.rating': '★ 4.9 · Empresa verificada',
+        'card.rate': 'tarifa ofrecida',
+        'card.detour': 'Desvío +1.8 km (+12 min)',
+        'card.view': 'Ver carga',
+
+    
         'how.eyebrow': 'CÓMO FUNCIONA',
         'how.title': 'Cómo funciona Trazza',
         'how.profile': 'Elige tu perfil',
@@ -36,6 +58,7 @@
         'how.m3.title': 'Sigue y califica',
         'how.m3.text': 'Sigue tu mercadería en vivo y califica al transportista cuando se confirme la entrega.',
 
+        
         'carriers.eyebrow': 'PARA TRANSPORTISTAS',
         'carriers.title': 'Deja de regresar vacío',
         'carriers.photo': 'Transportista revisando sugerencias de carga en su celular',
@@ -47,6 +70,7 @@
         'carriers.f3.text': 'Perfiles de empresas verificados y calificaciones de otros transportistas.',
         'carriers.cta': 'Regístrate como transportista',
 
+        
         'merchants.eyebrow': 'PARA COMERCIANTES',
         'merchants.title': 'Envía tu mercadería sin<br> un contrato fijo',
         'merchants.photo': 'Dueño de una pyme preparando un envío',
@@ -57,6 +81,112 @@
         'merchants.f3.title': 'Transportistas verificados',
         'merchants.f3.text': 'Transportistas con identidad verificada (DNI) y calificaciones de otros comerciantes.',
         'merchants.cta': 'Regístrate como comerciante',
+
+        
+        'compare.eyebrow': 'COMPARACIÓN',
+        'compare.title': '¿Por qué Trazza?',
+        'compare.criteria': 'Criterio',
+        'compare.whatsapp': 'Grupos de WhatsApp / contactos',
+        'compare.traditional': 'Transportistas tradicionales',
+        'compare.r1': 'Encontrar carga o transportista',
+        'compare.r1.trazza': 'Sugerencias en tu ruta',
+        'compare.r1.whatsapp': 'Búsqueda manual, sin garantía',
+        'compare.r1.traditional': 'Solo contratos fijos',
+        'compare.r2': 'Comisión por viaje',
+        'compare.r2.trazza': 'Ninguna',
+        'compare.r2.whatsapp': 'Ninguna',
+        'compare.r2.traditional': 'Incluida en la tarifa',
+        'compare.r3': 'Confianza',
+        'compare.r3.trazza': 'ID verificado + calificaciones mutuas',
+        'compare.r3.whatsapp': 'Boca en boca',
+        'compare.r3.traditional': 'Reputación de la empresa',
+        'compare.r4': 'Seguimiento del envío',
+        'compare.r4.trazza': 'En vivo, con alertas de desvío',
+        'compare.r4.whatsapp': 'Preguntando por teléfono',
+        'compare.r4.traditional': 'Depende de la empresa',
+        'compare.m1.trazza': 'Trazza: Sugerencias en tu ruta',
+        'compare.m1.others': 'Otros: Búsqueda manual en grupos',
+        'compare.m2.trazza': 'Trazza: Ninguna',
+        'compare.m2.others': 'Otros: Incluida (transportistas tradicionales)',
+        'compare.m3.trazza': 'Trazza: ID verificado + calificaciones',
+        'compare.m3.others': 'Otros: Boca en boca',
+        'compare.m4.trazza': 'Trazza: En vivo, con alertas de desvío',
+        'compare.m4.others': 'Otros: Preguntando por teléfono',
+
+        
+        'plans.eyebrow': 'PLANES',
+        'plans.title': 'Planes simples, sin comisión por viaje',
+        'plans.sub': 'Trazza nunca cobra un porcentaje de tu flete. Elige el plan que mejor se adapte a ti.',
+        'plans.month': '/ mes',
+        'plans.free': 'Gratis',
+        'plans.free.f1': 'Hasta 5 publicaciones al mes',
+        'plans.free.f2': 'Búsqueda de cargas y transportistas',
+        'plans.free.f3': 'Seguimiento de envíos en vivo',
+        'plans.free.f4': 'Calificaciones mutuas',
+        'plans.free.cta': 'Empezar gratis',
+        'plans.recommended': 'Recomendado',
+        'plans.pro.price': 'S/ [precio]',
+        'plans.pro.f1': 'Publicaciones ilimitadas',
+        'plans.pro.f2': 'Prioridad en las sugerencias de carga',
+        'plans.pro.f3': 'Varios vehículos en una cuenta',
+        'plans.pro.f4': 'Reportes mensuales de viajes',
+        'plans.pro.cta': 'Pasar a Pro',
+
+        
+        'testimonials.eyebrow': 'TESTIMONIOS',
+        'testimonials.title': 'Lo que dicen nuestros usuarios',
+        'testimonials.stars': '5 de 5 estrellas',
+        'testimonials.q1': '“[Cita de un transportista entrevistado durante la validación, sobre encontrar cargas para el viaje de retorno.]”',
+        'testimonials.n1': '[Nombre del transportista]',
+        'testimonials.r1': 'Transportista · [Distrito]',
+        'testimonials.q2': '“[Cita de un comerciante entrevistado durante la validación, sobre el seguimiento y la confianza.]”',
+        'testimonials.n2': '[Nombre del comerciante]',
+        'testimonials.r2': 'Comerciante · [Tipo de negocio]',
+
+        
+        'video.eyebrow': 'SOBRE EL PRODUCTO',
+        'video.title': 'Mira Trazza en acción',
+        'video.play': 'Reproducir el video sobre el producto',
+        'video.caption': 'Video sobre el producto · 2:30',
+
+        
+        'final.title': 'Llena tu viaje de retorno o envía tu mercadería hoy',
+        'final.sub': 'Crea tu cuenta gratis en minutos.',
+
+        
+        'footer.desc': 'Fletes de retorno para Lima. Conectamos transportistas y pymes.',
+        'footer.product': 'Producto',
+        'footer.legal': 'Legal',
+        'footer.terms': 'Términos y condiciones',
+        'footer.privacy': 'Política de privacidad',
+        'footer.complaints': 'Libro de reclamaciones',
+        'footer.contact': 'Contacto',
+        'footer.copy': '&copy; 2026 StackRoot · Trazza<span class="desktop-only">. Todos los derechos reservados.</span>',
+
+        
+        'auth.back': 'Volver al inicio de Trazza',
+        'auth.carrier': 'Transportista',
+        'auth.merchant': 'Comerciante',
+        'auth.email': 'Correo electrónico',
+        'auth.emailPh': 'tu@correo.com',
+        'auth.password': 'Contraseña',
+        'login.title': 'Iniciar sesión – Trazza',
+        'login.heading': 'Bienvenido de nuevo',
+        'login.sub': 'Inicia sesión en tu cuenta para continuar',
+        'login.forgot': '¿Olvidaste tu contraseña?',
+        'login.submit': 'Iniciar sesión',
+        'login.noAccount': '¿No tienes una cuenta?',
+        'login.signup': 'Regístrate aquí',
+        'register.title': 'Crear cuenta – Trazza',
+        'register.heading': 'Crea tu cuenta',
+        'register.sub': 'Llena tus viajes de retorno o envía tu mercadería por Lima',
+        'register.name': 'Nombre o razón social',
+        'register.namePh': 'ej. Logística SAC',
+        'register.doc': 'RUC o DNI',
+        'register.docPh': 'Ingresa tu número de documento',
+        'register.submit': 'Regístrate',
+        'register.hasAccount': '¿Ya tienes una cuenta?',
+        'register.login': 'Inicia sesión'
     };
 
     const english = {

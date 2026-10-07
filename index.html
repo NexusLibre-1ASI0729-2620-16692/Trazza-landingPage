@@ -5,160 +5,492 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="meta.title">Trazza – Return-trip freight for Lima</title>
     <meta name="description" data-i18n-attr="content:meta.description" content="Trazza connects carriers returning with free space to small and medium businesses that need to ship goods across Lima.">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
 
-<svg class="icon-sprite" aria-hidden="true" focusable="false">
-    <symbol id="i-route" viewBox="0 0 24 24"><path d="M5 19c0-6 14-6 14-13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="5" cy="19" r="2.5" fill="currentColor"/><circle cx="19" cy="5" r="2.5" fill="currentColor"/></symbol>
-    <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4v10l-9 4-9-4z M3 7l9 4 9-4 M12 11v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
-    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.7-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.3 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.3" fill="currentColor"/></symbol>
-    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.4 8.3-7 10-3.6-1.7-7-5-7-10V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="6" cy="18" r="2" fill="currentColor"/><circle cx="17" cy="18" r="2" fill="currentColor"/></symbol>
-    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></symbol>
-    <symbol id="i-check" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-</svg>
+    <!-- Icon sprite -->
+    <svg class="icon-sprite" aria-hidden="true" focusable="false">
+        <symbol id="i-route" viewBox="0 0 24 24"><path d="M5 19c0-6 14-6 14-13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="5" cy="19" r="2.5" fill="currentColor"/><circle cx="19" cy="5" r="2.5" fill="currentColor"/></symbol>
+        <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4v10l-9 4-9-4z M3 7l9 4 9-4 M12 11v10" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+        <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.7-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.3 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="10" r="2.3" fill="currentColor"/></symbol>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.4 8.3-7 10-3.6-1.7-7-5-7-10V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+        <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 10h4l3 3v3h-7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="6" cy="18" r="2" fill="currentColor"/><circle cx="17" cy="18" r="2" fill="currentColor"/></symbol>
+        <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="currentColor"/></symbol>
+        <symbol id="i-check" viewBox="0 0 16 16"><path d="M4 8l3 3 5-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    </svg>
 
+    <!-- 01 Header -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#top" class="logo" aria-label="Trazza home" data-i18n-attr="aria-label:logo.home">
+                <span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-route"/></svg></span>
+                <span class="logo-text">
+                    <span class="brand">Trazza</span>
+                    <span class="slogan">SMART LOGISTICS</span>
+                </span>
+            </a>
 
-<main id="top">
-
-    <section id="how-it-works" class="section">
-        <div class="container">
-            <div class="section-head center">
-                <span class="eyebrow" data-i18n="how.eyebrow">HOW IT WORKS</span>
-                <h2 data-i18n="how.title">How Trazza works</h2>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#how-it-works" data-i18n="nav.how">How it works</a></li>
+                    <li><a href="#carriers" data-i18n="nav.carriers">For Carriers</a></li>
+                    <li><a href="#merchants" data-i18n="nav.merchants">For Merchants</a></li>
+                    <li><a href="#plans" data-i18n="nav.plans">Plans</a></li>
+                    <li><a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+                </ul>
+                <a href="https://main.d1h7l9z3r6ucz4.amplifyapp.com" class="btn btn-outline btn-md nav-signin-mobile" data-i18n="nav.signin">Sign in</a>
             </div>
 
-            <div class="segmented" role="tablist" aria-label="Choose your profile" data-i18n-attr="aria-label:how.profile" data-segmented="steps">
-                <button type="button" role="tab" class="is-active" aria-selected="true" data-panel="carriers" data-i18n="how.tabCarriers">For Carriers</button>
-                <button type="button" role="tab" aria-selected="false" data-panel="merchants" data-i18n="how.tabMerchants">For Merchants</button>
-            </div>
-
-            <!-- Carriers -->
-            <div class="steps-grid" role="tabpanel" data-panel-group="steps" data-panel-id="carriers">
-                <article class="step-card">
-                    <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg></span>
-                    <span class="step-num" aria-hidden="true">01</span>
-                    <h3 data-i18n="how.c1.title">Publish your return route</h3>
-                    <p data-i18n="how.c1.text">Tell us where your delivery ends, where you are heading and how much space you have left.</p>
-                </article>
-                <article class="step-card">
-                    <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></span>
-                    <span class="step-num" aria-hidden="true">02</span>
-                    <h3 data-i18n="how.c2.title">Get compatible loads</h3>
-                    <p data-i18n="how.c2.text">See loads on your way back with the detour and the offered rate before you accept.</p>
-                </article>
-                <article class="step-card">
-                    <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span>
-                    <span class="step-num" aria-hidden="true">03</span>
-                    <h3 data-i18n="how.c3.title">Deliver and get rated</h3>
-                    <p data-i18n="how.c3.text">Confirm pickup and delivery in the app and build your reputation with every trip.</p>
-                </article>
-            </div>
-
-            <!-- Merchants -->
-            <div class="steps-grid" role="tabpanel" data-panel-group="steps" data-panel-id="merchants" hidden>
-                <article class="step-card">
-                    <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></span>
-                    <span class="step-num" aria-hidden="true">01</span>
-                    <h3 data-i18n="how.m1.title">Publish your shipment</h3>
-                    <p data-i18n="how.m1.text">Tell us what you need to move, the pickup and delivery points and the approximate weight.</p>
-                </article>
-                <article class="step-card">
-                    <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
-                    <span class="step-num" aria-hidden="true">02</span>
-                    <h3 data-i18n="how.m2.title">Choose a carrier on your route</h3>
-                    <p data-i18n="how.m2.text">See verified carriers already heading your way, with their rating and the rate before you confirm.</p>
-                </article>
-                <article class="step-card">
-                    <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></span>
-                    <span class="step-num" aria-hidden="true">03</span>
-                    <h3 data-i18n="how.m3.title">Track and rate</h3>
-                    <p data-i18n="how.m3.text">Follow your goods live and rate the carrier once the delivery is confirmed.</p>
-                </article>
+            <div class="nav-tools">
+                <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.group">
+                    <button type="button" data-lang="en" class="is-active" aria-pressed="true">EN</button>
+                    <span aria-hidden="true">|</span>
+                    <button type="button" data-lang="es" aria-pressed="false">ES</button>
+                </div>
+                <a href="https://main.d1h7l9z3r6ucz4.amplifyapp.com" class="btn btn-outline btn-sm nav-signin" data-i18n="nav.signin">Sign in</a>
+                <button class="burger-menu" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
-    </section>
-    <section id="carriers" class="section bg-light">
-        <div class="container split">
-            <figure class="split-media split-media--carrier">
-                <img src="./assets/img/carrier-checking-loads.jpg" alt="Carrier checking load suggestions on his phone" data-i18n-attr="alt:carriers.photo" width="1200" height="680" loading="lazy">
-            </figure>
+    </nav>
 
-            <div class="split-content">
-                <span class="eyebrow" data-i18n="carriers.eyebrow">FOR CARRIERS</span>
-                <h2 data-i18n="carriers.title">Stop driving back empty</h2>
-                <ul class="feature-list">
-                    <li class="feature-row">
+    <main id="top">
+        <!-- 02 Hero -->
+        <header class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="tag-label" data-i18n="hero.tag">RETURN-TRIP FREIGHT FOR LIMA</span>
+                    <h1 class="hero-title" data-i18n-html="hero.title">Is your truck<br> coming back <span>empty?</span></h1>
+                    <p class="hero-desc" data-i18n-html="hero.desc">
+                        Trazza connects carriers returning with free space to small and medium businesses that need to ship goods across Lima.
+                        <span class="desktop-only">Publish your return route, get compatible loads and track every shipment live.</span>
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="registro.html?role=carrier" class="btn btn-primary btn-lg" data-i18n="cta.carrier">I'm a Carrier</a>
+                        <a href="registro.html?role=merchant" class="btn btn-secondary btn-lg" data-i18n="cta.merchant">I'm a Merchant</a>
+                    </div>
+
+                    <ul class="trust-list">
+                        <li class="trust-chip"><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="trust.commission">No commission per trip</span></li>
+                        <li class="trust-chip"><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="trust.dni">DNI-verified carriers</span></li>
+                        <li class="trust-chip desktop-only"><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="trust.tracking">Live tracking</span></li>
+                    </ul>
+                </div>
+
+                <!-- Hero card / Load suggestion -->
+                <div class="hero-visual">
+                    <article class="load-card" aria-label="Example of a load suggestion" data-i18n-attr="aria-label:card.aria">
+                        <div class="load-card-head">
+                            <h2 data-i18n="card.title">Load suggestion for your return</h2>
+                            <span class="chip chip-green" data-i18n="card.new">New</span>
+                        </div>
+
+                        <div class="route-map">
+                            <svg viewBox="0 0 422 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                                <g stroke="#FFFFFF" stroke-width="6">
+                                    <line x1="84.4" y1="4" x2="54.4" y2="186"/>
+                                    <line x1="168.8" y1="4" x2="138.8" y2="186"/>
+                                    <line x1="253.2" y1="4" x2="223.2" y2="186"/>
+                                    <line x1="337.6" y1="4" x2="307.6" y2="186"/>
+                                    <line x1="4" y1="47.5" x2="418" y2="67.5"/>
+                                    <line x1="4" y1="95" x2="418" y2="115"/>
+                                    <line x1="4" y1="142.5" x2="418" y2="162.5"/>
+                                </g>
+                                <path d="M63 148 Q 127 86 211 95 T 359 38" stroke="#0037B0" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="63.3" cy="148.2" r="8" fill="#FFFFFF" stroke="#0037B0" stroke-width="3"/>
+                                <circle cx="358.7" cy="38" r="8" fill="#0037B0"/>
+                                <path d="M171 105 q 40 30 80 6" stroke="#8A4B00" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5"/>
+                                <circle cx="251" cy="111" r="7" fill="#FFFFFF" stroke="#8A4B00" stroke-width="3"/>
+                            </svg>
+                            <span class="route-label">Lurín → Los Olivos</span>
+                        </div>
+
+                        <div class="load-merchant">
+                            <span class="avatar">TA</span>
+                            <div class="load-merchant-info">
+                                <strong>Textiles Andinos SAC</strong>
+                                <span data-i18n="card.rating">★ 4.9 · Verified business</span>
+                            </div>
+                            <div class="load-rate">
+                                <strong>S/ 180</strong>
+                                <span data-i18n="card.rate">offered rate</span>
+                            </div>
+                        </div>
+
+                        <hr class="divider">
+
+                        <p class="load-route">Ate → San Martín de Porres · 800 kg</p>
+                        <div class="load-card-foot">
+                            <span class="chip chip-amber" data-i18n="card.detour">Detour +1.8 km (+12 min)</span>
+                            <a href="https://main.d1h7l9z3r6ucz4.amplifyapp.com" class="btn btn-primary btn-sm" data-i18n="card.view">View load</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </header>
+
+        <!-- 03 How it works -->
+        <section id="how-it-works" class="section">
+            <div class="container">
+                <div class="section-head center">
+                    <span class="eyebrow" data-i18n="how.eyebrow">HOW IT WORKS</span>
+                    <h2 data-i18n="how.title">How Trazza works</h2>
+                </div>
+
+                <div class="segmented" role="tablist" aria-label="Choose your profile" data-i18n-attr="aria-label:how.profile" data-segmented="steps">
+                    <button type="button" role="tab" class="is-active" aria-selected="true" data-panel="carriers" data-i18n="how.tabCarriers">For Carriers</button>
+                    <button type="button" role="tab" aria-selected="false" data-panel="merchants" data-i18n="how.tabMerchants">For Merchants</button>
+                </div>
+
+                <!-- Carriers -->
+                <div class="steps-grid" role="tabpanel" data-panel-group="steps" data-panel-id="carriers">
+                    <article class="step-card">
                         <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg></span>
-                        <div><h3 data-i18n="carriers.f1.title">Loads on your way back</h3><p data-i18n="carriers.f1.text">Only loads that fit your route and the capacity of your vehicle.</p></div>
-                    </li>
-                    <li class="feature-row">
-                        <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
-                        <div><h3 data-i18n="carriers.f2.title">Know your detour first</h3><p data-i18n="carriers.f2.text">See the extra kilometers and minutes before accepting any load.</p></div>
-                    </li>
-                    <li class="feature-row">
-                        <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
-                        <div><h3 data-i18n="carriers.f3.title">Trusted merchants</h3><p data-i18n="carriers.f3.text">Verified business profiles and ratings from other carriers.</p></div>
-                    </li>
-                </ul>
-                <a href="#" class="btn btn-primary btn-md split-cta" data-i18n="carriers.cta">Sign up as Carrier</a>
-            </div>
-        </div>
-    </section>
-    <section id="merchants" class="section">
-        <div class="container split split--reverse">
-            <div class="split-content">
-                <span class="eyebrow eyebrow--orange" data-i18n="merchants.eyebrow">FOR MERCHANTS</span>
-                <h2 data-i18n-html="merchants.title">Ship your goods without<br> a fixed contract</h2>
-                <ul class="feature-list feature-list--orange">
-                    <li class="feature-row">
+                        <span class="step-num" aria-hidden="true">01</span>
+                        <h3 data-i18n="how.c1.title">Publish your return route</h3>
+                        <p data-i18n="how.c1.text">Tell us where your delivery ends, where you are heading and how much space you have left.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></span>
+                        <span class="step-num" aria-hidden="true">02</span>
+                        <h3 data-i18n="how.c2.title">Get compatible loads</h3>
+                        <p data-i18n="how.c2.text">See loads on your way back with the detour and the offered rate before you accept.</p>
+                    </article>
+                    <article class="step-card">
+                        <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span>
+                        <span class="step-num" aria-hidden="true">03</span>
+                        <h3 data-i18n="how.c3.title">Deliver and get rated</h3>
+                        <p data-i18n="how.c3.text">Confirm pickup and delivery in the app and build your reputation with every trip.</p>
+                    </article>
+                </div>
+
+                <!-- Merchants -->
+                <div class="steps-grid" role="tabpanel" data-panel-group="steps" data-panel-id="merchants" hidden>
+                    <article class="step-card">
+                        <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></span>
+                        <span class="step-num" aria-hidden="true">01</span>
+                        <h3 data-i18n="how.m1.title">Publish your shipment</h3>
+                        <p data-i18n="how.m1.text">Tell us what you need to move, the pickup and delivery points and the approximate weight.</p>
+                    </article>
+                    <article class="step-card">
                         <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
-                        <div><h3 data-i18n="merchants.f1.title">Carriers with space on your route</h3><p data-i18n="merchants.f1.text">Find carriers already heading to your destination, at a lower cost than a dedicated trip.</p></div>
-                    </li>
-                    <li class="feature-row">
+                        <span class="step-num" aria-hidden="true">02</span>
+                        <h3 data-i18n="how.m2.title">Choose a carrier on your route</h3>
+                        <p data-i18n="how.m2.text">See verified carriers already heading your way, with their rating and the rate before you confirm.</p>
+                    </article>
+                    <article class="step-card">
                         <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></span>
-                        <div><h3 data-i18n="merchants.f2.title">Live shipment tracking</h3><p data-i18n="merchants.f2.text">Follow your goods and get an alert if the vehicle leaves the planned route.</p></div>
-                    </li>
-                    <li class="feature-row">
-                        <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
-                        <div><h3 data-i18n="merchants.f3.title">Verified carriers</h3><p data-i18n="merchants.f3.text">Identity-verified carriers (DNI) with ratings from other merchants.</p></div>
-                    </li>
-                </ul>
-                <a href="#" class="btn btn-secondary btn-md split-cta" data-i18n="merchants.cta">Sign up as Merchant</a>
+                        <span class="step-num" aria-hidden="true">03</span>
+                        <h3 data-i18n="how.m3.title">Track and rate</h3>
+                        <p data-i18n="how.m3.text">Follow your goods live and rate the carrier once the delivery is confirmed.</p>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <figure class="split-media split-media--merchant">
-                <img src="./assets/img/merchant-preparing-shipment.jpg" alt="SME owner preparing a shipment" data-i18n-attr="alt:merchants.photo" width="679" height="452" loading="lazy">
-            </figure>
+        <!-- 04 For Carriers -->
+        <section id="carriers" class="section bg-light">
+            <div class="container split">
+                <figure class="split-media split-media--carrier">
+                    <img src="./img/carrier-checking-loads.jpg" alt="Carrier checking load suggestions on his phone" data-i18n-attr="alt:carriers.photo" width="1200" height="680" loading="lazy">
+                </figure>
+
+                <div class="split-content">
+                    <span class="eyebrow" data-i18n="carriers.eyebrow">FOR CARRIERS</span>
+                    <h2 data-i18n="carriers.title">Stop driving back empty</h2>
+                    <ul class="feature-list">
+                        <li class="feature-row">
+                            <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg></span>
+                            <div><h3 data-i18n="carriers.f1.title">Loads on your way back</h3><p data-i18n="carriers.f1.text">Only loads that fit your route and the capacity of your vehicle.</p></div>
+                        </li>
+                        <li class="feature-row">
+                            <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+                            <div><h3 data-i18n="carriers.f2.title">Know your detour first</h3><p data-i18n="carriers.f2.text">See the extra kilometers and minutes before accepting any load.</p></div>
+                        </li>
+                        <li class="feature-row">
+                            <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+                            <div><h3 data-i18n="carriers.f3.title">Trusted merchants</h3><p data-i18n="carriers.f3.text">Verified business profiles and ratings from other carriers.</p></div>
+                        </li>
+                    </ul>
+                    <a href="registro.html?role=carrier" class="btn btn-primary btn-md split-cta" data-i18n="carriers.cta">Sign up as Carrier</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 For Merchants -->
+        <section id="merchants" class="section">
+            <div class="container split split--reverse">
+                <div class="split-content">
+                    <span class="eyebrow eyebrow--orange" data-i18n="merchants.eyebrow">FOR MERCHANTS</span>
+                    <h2 data-i18n-html="merchants.title">Ship your goods without<br> a fixed contract</h2>
+                    <ul class="feature-list feature-list--orange">
+                        <li class="feature-row">
+                            <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
+                            <div><h3 data-i18n="merchants.f1.title">Carriers with space on your route</h3><p data-i18n="merchants.f1.text">Find carriers already heading to your destination, at a lower cost than a dedicated trip.</p></div>
+                        </li>
+                        <li class="feature-row">
+                            <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></span>
+                            <div><h3 data-i18n="merchants.f2.title">Live shipment tracking</h3><p data-i18n="merchants.f2.text">Follow your goods and get an alert if the vehicle leaves the planned route.</p></div>
+                        </li>
+                        <li class="feature-row">
+                            <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+                            <div><h3 data-i18n="merchants.f3.title">Verified carriers</h3><p data-i18n="merchants.f3.text">Identity-verified carriers (DNI) with ratings from other merchants.</p></div>
+                        </li>
+                    </ul>
+                    <a href="registro.html?role=merchant" class="btn btn-secondary btn-md split-cta" data-i18n="merchants.cta">Sign up as Merchant</a>
+                </div>
+
+                <figure class="split-media split-media--merchant">
+                    <img src="./img/merchant-preparing-shipment.jpg" alt="SME owner preparing a shipment" data-i18n-attr="alt:merchants.photo" width="679" height="452" loading="lazy">
+                </figure>
+            </div>
+        </section>
+
+        <!-- 06 Comparison -->
+        <section id="comparison" class="section bg-light">
+            <div class="container">
+                <div class="section-head center">
+                    <span class="eyebrow" data-i18n="compare.eyebrow">COMPARISON</span>
+                    <h2 data-i18n="compare.title">Why Trazza?</h2>
+                </div>
+
+                <!-- Desktop / tablet: table -->
+                <div class="compare-table-wrap">
+                    <table class="compare-table">
+                        <colgroup>
+                            <col class="col-criteria"><col class="col-trazza"><col class="col-other"><col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col"><span class="sr-only" data-i18n="compare.criteria">Criteria</span></th>
+                                <th scope="col" class="is-trazza">Trazza</th>
+                                <th scope="col" data-i18n="compare.whatsapp">WhatsApp groups / contacts</th>
+                                <th scope="col" data-i18n="compare.traditional">Traditional carriers</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" data-i18n="compare.r1">Finding a load or carrier</th>
+                                <td class="is-trazza"><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="compare.r1.trazza">Suggestions on your route</span></td>
+                                <td data-i18n="compare.r1.whatsapp">Manual search, no guarantee</td>
+                                <td data-i18n="compare.r1.traditional">Fixed contracts only</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-i18n="compare.r2">Commission per trip</th>
+                                <td class="is-trazza"><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="compare.r2.trazza">None</span></td>
+                                <td data-i18n="compare.r2.whatsapp">None</td>
+                                <td data-i18n="compare.r2.traditional">Included in the rate</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-i18n="compare.r3">Trust</th>
+                                <td class="is-trazza"><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="compare.r3.trazza">Verified ID + two-way ratings</span></td>
+                                <td data-i18n="compare.r3.whatsapp">Word of mouth</td>
+                                <td data-i18n="compare.r3.traditional">Company reputation</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-i18n="compare.r4">Shipment tracking</th>
+                                <td class="is-trazza"><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="compare.r4.trazza">Live, with detour alerts</span></td>
+                                <td data-i18n="compare.r4.whatsapp">Asking by phone</td>
+                                <td data-i18n="compare.r4.traditional">Depends on the company</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Mobile: cards -->
+                <div class="compare-cards">
+                    <article class="compare-card">
+                        <h3 data-i18n="compare.r1">Finding a load or carrier</h3>
+                        <p class="compare-trazza" data-i18n="compare.m1.trazza">Trazza: Suggestions on your route</p>
+                        <p class="compare-others" data-i18n="compare.m1.others">Others: Manual search in groups</p>
+                    </article>
+                    <article class="compare-card">
+                        <h3 data-i18n="compare.r2">Commission per trip</h3>
+                        <p class="compare-trazza" data-i18n="compare.m2.trazza">Trazza: None</p>
+                        <p class="compare-others" data-i18n="compare.m2.others">Others: Included (traditional carriers)</p>
+                    </article>
+                    <article class="compare-card">
+                        <h3 data-i18n="compare.r3">Trust</h3>
+                        <p class="compare-trazza" data-i18n="compare.m3.trazza">Trazza: Verified ID + ratings</p>
+                        <p class="compare-others" data-i18n="compare.m3.others">Others: Word of mouth</p>
+                    </article>
+                    <article class="compare-card">
+                        <h3 data-i18n="compare.r4">Shipment tracking</h3>
+                        <p class="compare-trazza" data-i18n="compare.m4.trazza">Trazza: Live, with detour alerts</p>
+                        <p class="compare-others" data-i18n="compare.m4.others">Others: Asking by phone</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 07 Plans -->
+        <section id="plans" class="section">
+            <div class="container">
+                <div class="section-head center">
+                    <span class="eyebrow" data-i18n="plans.eyebrow">PLANS</span>
+                    <h2 data-i18n="plans.title">Simple plans, no commission per trip</h2>
+                    <p class="section-sub" data-i18n="plans.sub">Trazza never charges a percentage of your freight. Pick the plan that fits you.</p>
+                </div>
+
+                <div class="plans-grid">
+                    <article class="plan-card">
+                        <h3 data-i18n="plans.free">Free</h3>
+                        <p class="plan-price"><strong>S/ 0</strong><span data-i18n="plans.month">/ month</span></p>
+                        <ul class="plan-features">
+                            <li><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="plans.free.f1">Up to 5 publications per month</span></li>
+                            <li><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="plans.free.f2">Load and carrier search</span></li>
+                            <li><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="plans.free.f3">Live shipment tracking</span></li>
+                            <li><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="plans.free.f4">Two-way ratings</span></li>
+                        </ul>
+                        <a href="registro.html" class="btn btn-outline btn-md btn-block" data-i18n="plans.free.cta">Start free</a>
+                    </article>
+
+                    <article class="plan-card plan-card--featured">
+                        <div class="plan-head">
+                            <h3>Pro</h3>
+                            <span class="chip chip-primary" data-i18n="plans.recommended">Recommended</span>
+                        </div>
+                        <p class="plan-price"><strong data-i18n="plans.pro.price">S/ [price]</strong><span data-i18n="plans.month">/ month</span></p>
+                        <ul class="plan-features">
+                            <li><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="plans.pro.f1">Unlimited publications</span></li>
+                            <li><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="plans.pro.f2">Priority in load suggestions</span></li>
+                            <li><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="plans.pro.f3">Several vehicles in one account</span></li>
+                            <li><span class="check-dot"><svg aria-hidden="true"><use href="#i-check"/></svg></span><span data-i18n="plans.pro.f4">Monthly trip reports</span></li>
+                        </ul>
+                        <a href="registro.html" class="btn btn-primary btn-md btn-block" data-i18n="plans.pro.cta">Go Pro</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 08 Testimonials -->
+        <section id="testimonials" class="section bg-light">
+            <div class="container">
+                <div class="section-head center">
+                    <span class="eyebrow" data-i18n="testimonials.eyebrow">TESTIMONIALS</span>
+                    <h2 data-i18n="testimonials.title">What our users say</h2>
+                </div>
+
+                <div class="testimonial-grid" data-slider>
+                    <article class="testimonial-card">
+                        <div class="stars" aria-label="5 out of 5 stars" data-i18n-attr="aria-label:testimonials.stars">★★★★★</div>
+                        <p class="quote" data-i18n="testimonials.q1">“[Quote from a carrier interviewed during validation, about finding loads for the return trip.]”</p>
+                        <div class="testimonial-author">
+                            <span class="avatar avatar-lg" aria-hidden="true"></span>
+                            <div>
+                                <strong data-i18n="testimonials.n1">[Carrier name]</strong>
+                                <span data-i18n="testimonials.r1">Carrier · [District]</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <div class="stars" aria-label="5 out of 5 stars" data-i18n-attr="aria-label:testimonials.stars">★★★★★</div>
+                        <p class="quote" data-i18n="testimonials.q2">“[Quote from a merchant interviewed during validation, about tracking and trust.]”</p>
+                        <div class="testimonial-author">
+                            <span class="avatar avatar-lg" aria-hidden="true"></span>
+                            <div>
+                                <strong data-i18n="testimonials.n2">[Merchant name]</strong>
+                                <span data-i18n="testimonials.r2">Merchant · [Business type]</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="slider-dots" aria-hidden="true">
+                    <button type="button" class="is-active" data-slider-dot tabindex="-1"></button>
+                    <button type="button" data-slider-dot tabindex="-1"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 09 Video About-the-Product -->
+        <section id="video" class="section">
+            <div class="container">
+                <div class="section-head center">
+                    <span class="eyebrow" data-i18n="video.eyebrow">ABOUT THE PRODUCT</span>
+                    <h2 data-i18n="video.title">See Trazza in action</h2>
+                </div>
+
+                <button type="button" class="video-box" aria-label="Play the About-the-Product video" data-i18n-attr="aria-label:video.play">
+                    <span class="play-btn" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M8 5.5l11 6.5-11 6.5z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                    </span>
+                    <span class="video-caption desktop-only" data-i18n="video.caption">Video About-the-Product · 2:30</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- 10 Final CTA -->
+        <section class="cta-section">
+            <div class="container cta-container">
+                <h2 data-i18n="final.title">Fill your return trip or ship your goods today</h2>
+                <p class="desktop-only" data-i18n="final.sub">Create your free account in minutes.</p>
+                <div class="cta-actions">
+                    <a href="registro.html?role=carrier" class="btn btn-white btn-lg" data-i18n="cta.carrier">I'm a Carrier</a>
+                    <a href="registro.html?role=merchant" class="btn btn-secondary btn-lg" data-i18n="cta.merchant">I'm a Merchant</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 11 Footer -->
+    <footer class="footer" id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#top" class="logo logo--light" aria-label="Trazza home" data-i18n-attr="aria-label:logo.home">
+                    <span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-route"/></svg></span>
+                    <span class="logo-text">
+                        <span class="brand">Trazza</span>
+                        <span class="slogan">SMART LOGISTICS</span>
+                    </span>
+                </a>
+                <p class="desktop-only" data-i18n="footer.desc">Return-trip freight for Lima. Connecting carriers and SMEs.</p>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.product">Product</h4>
+                <ul>
+                    <li><a href="#how-it-works" data-i18n="nav.how">How it works</a></li>
+                    <li><a href="#plans" data-i18n="nav.plans">Plans</a></li>
+                    <li><a href="https://main.d1h7l9z3r6ucz4.amplifyapp.com" data-i18n="nav.signin">Sign in</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <ul>
+                    <li><a href="#" data-i18n="footer.terms">Terms &amp; Conditions</a></li>
+                    <li><a href="#" data-i18n="footer.privacy">Privacy Policy</a></li>
+                    <li><a href="#" data-i18n="footer.complaints">Complaints Book</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.contact">Contact</h4>
+                <ul>
+                    <li><a href="mailto:contacto@trazza.pe">contacto@trazza.pe</a></li>
+                    <li>Lima, Perú</li>
+                </ul>
+            </div>
+            <div class="footer-lang">
+                <div class="lang-switch lang-switch--dark" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.group">
+                    <button type="button" data-lang="en" class="is-active" aria-pressed="true">EN</button>
+                    <span aria-hidden="true">|</span>
+                    <button type="button" data-lang="es" aria-pressed="false">ES</button>
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="container footer-bottom">
+            <p data-i18n-html="footer.copy">&copy; 2026 StackRoot · Trazza<span class="desktop-only">. All rights reserved.</span></p>
+        </div>
+    </footer>
 
-    <section id="comparison" class="section bg-light">
-    </section>
-
-    <section id="plans" class="section">
-    </section>
-
-    <section id="testimonials" class="section bg-light">
-    </section>
-
-    <section id="video" class="section">
-    </section>
-
-    <section class="cta-section">
-    </section>
-</main>
-
-<footer class="footer" id="contact">
-</footer>
-<script src="./assets/scripts/main.js"></script>
-<script src="./assets/scripts/i18n.js"></script>
-<script src="./assets/scripts/main.js"></script>
-</body>
+    <script src="./scripts/i18n.js"></script>
+    <script src="./scripts/main.js"></script>
 </body>
 </html>
