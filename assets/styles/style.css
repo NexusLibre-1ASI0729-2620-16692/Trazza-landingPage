@@ -259,12 +259,141 @@ footer[id] {
 }
 
 
+.segmented {
+    display: flex;
+    width: 340px;
+    height: 44px;
+    margin: -12px auto 36px;
+    padding: 4px;
+    border-radius: 22px;
+    background-color: var(--primary-soft);
+}
+.segmented button {
+    flex: 1;
+    border: none;
+    border-radius: 18px;
+    background: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-body);
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+.segmented button.is-active {
+    background-color: var(--primary);
+    color: var(--white);
+    font-weight: 700;
+}
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.steps-grid[hidden] {
+    display: none;
+}
+.step-card {
+    position: relative;
+    min-height: 210px;
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+    box-shadow: var(--shadow-card);
+}
+.step-num {
+    position: absolute;
+    top: 30px;
+    right: 28px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--border-soft);
+}
+.step-card h3 {
+    margin-top: 22px;
+    font-size: 19px;
+}
+.step-card p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--text-body);
+}
+
+#carriers,
+#merchants {
+    padding: 80px 0;
+}
+.split {
+    display: grid;
+    grid-template-columns: 500px minmax(0, 1fr);
+    gap: 60px;
+    align-items: center;
+}
+.split--reverse {
+    grid-template-columns: minmax(0, 1fr) 500px;
+}
+.split-media {
+    height: 400px;
+    margin: 0;
+    border-radius: 20px;
+    background-color: var(--media-bg);
+    overflow: hidden;
+}
+.split-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.split-media--carrier img { object-position: 70% center; }
+.split-media--merchant img { object-position: 40% center; }
+.split-content h2 {
+    margin-bottom: 34px;
+}
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+.feature-list--orange {
+    gap: 32px;
+}
+.feature-row {
+    display: flex;
+    gap: 20px;
+}
+.feature-row h3 {
+    font-size: 17px;
+    margin-top: 2px;
+}
+.feature-row p {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--text-body);
+}
+.split-cta {
+    margin-top: 48px;
+}
+
 
 @media (max-width: 1240px) {
     .container { padding: 0 40px; }
 }
 
 @media (max-width: 1024px) {
+    .split,
+    .split--reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .split--reverse .split-media { order: -1; }
+    .split-media { height: 360px; }
+
+    .steps-grid { gap: 16px; }
+    .step-card { padding: 24px; }
 }
 
 @media (max-width: 768px) {
@@ -274,6 +403,7 @@ footer[id] {
     .desktop-only { display: none !important; }
     .mobile-only { display: inline; }
 
+    /* Sections */
     .section { padding: 36px 0 42px; }
     .section-head,
     .section-head.center { text-align: left; margin-bottom: 22px; }
@@ -283,4 +413,61 @@ footer[id] {
         line-height: 36px;
     }
     .section-sub { display: none; }
+
+    /* How it works */
+    .segmented {
+        width: 100%;
+        margin: 0 0 24px;
+    }
+    .segmented button { font-size: 13px; }
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .step-card {
+        min-height: 150px;
+        padding: 20px;
+    }
+    .step-num {
+        top: 24px;
+        right: 20px;
+        font-size: 24px;
+    }
+    .step-card h3 {
+        margin-top: 18px;
+        font-size: 16px;
+    }
+    .step-card p {
+        margin-top: 6px;
+        font-size: 13px;
+        line-height: 19px;
+    }
+
+    #carriers,
+    #merchants { padding: 32px 0 36px; }
+    .split,
+    .split--reverse { gap: 28px; }
+    .split-media { height: 220px; }
+    .split-content h2 {
+        font-size: 26px;
+        line-height: 34px;
+        margin-bottom: 26px;
+    }
+    .feature-list,
+    .feature-list--orange { gap: 32px; }
+    .feature-row { gap: 16px; }
+    .feature-row .icon-box {
+        width: 40px;
+        height: 40px;
+    }
+    .feature-row .icon {
+        width: 20px;
+        height: 20px;
+    }
+    .feature-row h3 { font-size: 15px; margin-top: 0; }
+    .feature-row p { font-size: 13px; line-height: 19px; margin-top: 4px; }
+    .split-cta {
+        width: 100%;
+        margin-top: 40px;
+    }
 }

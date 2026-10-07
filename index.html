@@ -27,12 +27,115 @@
 <main id="top">
 
     <section id="how-it-works" class="section">
-    </section>
+        <div class="container">
+            <div class="section-head center">
+                <span class="eyebrow" data-i18n="how.eyebrow">HOW IT WORKS</span>
+                <h2 data-i18n="how.title">How Trazza works</h2>
+            </div>
 
+            <div class="segmented" role="tablist" aria-label="Choose your profile" data-i18n-attr="aria-label:how.profile" data-segmented="steps">
+                <button type="button" role="tab" class="is-active" aria-selected="true" data-panel="carriers" data-i18n="how.tabCarriers">For Carriers</button>
+                <button type="button" role="tab" aria-selected="false" data-panel="merchants" data-i18n="how.tabMerchants">For Merchants</button>
+            </div>
+
+            <!-- Carriers -->
+            <div class="steps-grid" role="tabpanel" data-panel-group="steps" data-panel-id="carriers">
+                <article class="step-card">
+                    <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg></span>
+                    <span class="step-num" aria-hidden="true">01</span>
+                    <h3 data-i18n="how.c1.title">Publish your return route</h3>
+                    <p data-i18n="how.c1.text">Tell us where your delivery ends, where you are heading and how much space you have left.</p>
+                </article>
+                <article class="step-card">
+                    <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></span>
+                    <span class="step-num" aria-hidden="true">02</span>
+                    <h3 data-i18n="how.c2.title">Get compatible loads</h3>
+                    <p data-i18n="how.c2.text">See loads on your way back with the detour and the offered rate before you accept.</p>
+                </article>
+                <article class="step-card">
+                    <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span>
+                    <span class="step-num" aria-hidden="true">03</span>
+                    <h3 data-i18n="how.c3.title">Deliver and get rated</h3>
+                    <p data-i18n="how.c3.text">Confirm pickup and delivery in the app and build your reputation with every trip.</p>
+                </article>
+            </div>
+
+            <!-- Merchants -->
+            <div class="steps-grid" role="tabpanel" data-panel-group="steps" data-panel-id="merchants" hidden>
+                <article class="step-card">
+                    <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></span>
+                    <span class="step-num" aria-hidden="true">01</span>
+                    <h3 data-i18n="how.m1.title">Publish your shipment</h3>
+                    <p data-i18n="how.m1.text">Tell us what you need to move, the pickup and delivery points and the approximate weight.</p>
+                </article>
+                <article class="step-card">
+                    <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
+                    <span class="step-num" aria-hidden="true">02</span>
+                    <h3 data-i18n="how.m2.title">Choose a carrier on your route</h3>
+                    <p data-i18n="how.m2.text">See verified carriers already heading your way, with their rating and the rate before you confirm.</p>
+                </article>
+                <article class="step-card">
+                    <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></span>
+                    <span class="step-num" aria-hidden="true">03</span>
+                    <h3 data-i18n="how.m3.title">Track and rate</h3>
+                    <p data-i18n="how.m3.text">Follow your goods live and rate the carrier once the delivery is confirmed.</p>
+                </article>
+            </div>
+        </div>
+    </section>
     <section id="carriers" class="section bg-light">
-    </section>
+        <div class="container split">
+            <figure class="split-media split-media--carrier">
+                <img src="./assets/img/carrier-checking-loads.jpg" alt="Carrier checking load suggestions on his phone" data-i18n-attr="alt:carriers.photo" width="1200" height="680" loading="lazy">
+            </figure>
 
+            <div class="split-content">
+                <span class="eyebrow" data-i18n="carriers.eyebrow">FOR CARRIERS</span>
+                <h2 data-i18n="carriers.title">Stop driving back empty</h2>
+                <ul class="feature-list">
+                    <li class="feature-row">
+                        <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-route"/></svg></span>
+                        <div><h3 data-i18n="carriers.f1.title">Loads on your way back</h3><p data-i18n="carriers.f1.text">Only loads that fit your route and the capacity of your vehicle.</p></div>
+                    </li>
+                    <li class="feature-row">
+                        <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+                        <div><h3 data-i18n="carriers.f2.title">Know your detour first</h3><p data-i18n="carriers.f2.text">See the extra kilometers and minutes before accepting any load.</p></div>
+                    </li>
+                    <li class="feature-row">
+                        <span class="icon-box"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+                        <div><h3 data-i18n="carriers.f3.title">Trusted merchants</h3><p data-i18n="carriers.f3.text">Verified business profiles and ratings from other carriers.</p></div>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-md split-cta" data-i18n="carriers.cta">Sign up as Carrier</a>
+            </div>
+        </div>
+    </section>
     <section id="merchants" class="section">
+        <div class="container split split--reverse">
+            <div class="split-content">
+                <span class="eyebrow eyebrow--orange" data-i18n="merchants.eyebrow">FOR MERCHANTS</span>
+                <h2 data-i18n-html="merchants.title">Ship your goods without<br> a fixed contract</h2>
+                <ul class="feature-list feature-list--orange">
+                    <li class="feature-row">
+                        <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg></span>
+                        <div><h3 data-i18n="merchants.f1.title">Carriers with space on your route</h3><p data-i18n="merchants.f1.text">Find carriers already heading to your destination, at a lower cost than a dedicated trip.</p></div>
+                    </li>
+                    <li class="feature-row">
+                        <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-eye"/></svg></span>
+                        <div><h3 data-i18n="merchants.f2.title">Live shipment tracking</h3><p data-i18n="merchants.f2.text">Follow your goods and get an alert if the vehicle leaves the planned route.</p></div>
+                    </li>
+                    <li class="feature-row">
+                        <span class="icon-box icon-box--orange"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+                        <div><h3 data-i18n="merchants.f3.title">Verified carriers</h3><p data-i18n="merchants.f3.text">Identity-verified carriers (DNI) with ratings from other merchants.</p></div>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-secondary btn-md split-cta" data-i18n="merchants.cta">Sign up as Merchant</a>
+            </div>
+
+            <figure class="split-media split-media--merchant">
+                <img src="./assets/img/merchant-preparing-shipment.jpg" alt="SME owner preparing a shipment" data-i18n-attr="alt:merchants.photo" width="679" height="452" loading="lazy">
+            </figure>
+        </div>
     </section>
 
     <section id="comparison" class="section bg-light">
@@ -53,6 +156,6 @@
 
 <footer class="footer" id="contact">
 </footer>
-
+<script src="./assets/scripts/main.js"></script>
 </body>
 </html>
