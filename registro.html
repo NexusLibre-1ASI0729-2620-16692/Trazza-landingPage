@@ -15,41 +15,112 @@
     <symbol id="i-route" viewBox="0 0 24 24"><path d="M5 19c0-6 14-6 14-13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="5" cy="19" r="2.5" fill="currentColor"/><circle cx="19" cy="5" r="2.5" fill="currentColor"/></symbol>
 </svg>
 
-<nav class="navbar legal-nav">
-    <div class="container nav-container">
-        <a href="index.html" class="logo" aria-label="Trazza home" data-i18n-attr="aria-label:logo.home">
-            <span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-route"/></svg></span>
-            <span class="logo-text">
-                <span class="brand">Trazza</span>
-                <span class="slogan">SMART LOGISTICS</span>
-            </span>
-        </a>
-        <div class="nav-tools">
+<main class="auth-page" style="display: flex; justify-content: center; align-items: center;">
+    <div class="auth-card">
+        
+        <div class="auth-lang">
             <div class="lang-switch" role="group" aria-label="Language">
                 <button type="button" data-lang="en" class="is-active" aria-pressed="true">EN</button>
                 <span aria-hidden="true">|</span>
                 <button type="button" data-lang="es" aria-pressed="false">ES</button>
             </div>
-            <a href="index.html" class="btn btn-outline btn-sm" data-i18n="terms.back">Back to home</a>
         </div>
-    </div>
-</nav>
 
-<main class="page-container" style="padding-top: 120px; min-height: 80vh; text-align: center;">
-    <div class="container">
-        <h1 style="margin-bottom: 2rem;">Sign Up to Trazza</h1>
-        
-        <div class="toggle-container" style="margin: 0 auto 2rem auto;">
+        <div class="auth-header">
+            <a href="index.html" class="logo" style="justify-content: center;">
+                <span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-route"/></svg></span>
+                <span class="logo-text">
+                    <span class="brand">Trazza</span>
+                    <span class="slogan">SMART LOGISTICS</span>
+                </span>
+            </a>
+            <h2 id="auth-title">Create an Account</h2>
+            <p id="auth-subtitle">Join Trazza today to get started.</p>
+        </div>
+
+        <!-- Role Toggle (Only for Register) -->
+        <div class="toggle-container auth-role-toggle" id="role-toggle-container">
             <button class="toggle-btn active" id="btn-carrier">Carrier</button>
             <button class="toggle-btn" id="btn-emprendedor">Merchant</button>
         </div>
-        
-        <div class="auth-form-placeholder" style="max-width: 400px; margin: 0 auto; background: var(--bg-surface, #fff); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-            <p>Authentication form will be integrated here via Amplify.</p>
-            <!-- Here you will eventually mount your Amplify Authenticator component -->
+
+        <!-- Register Form -->
+        <form class="auth-form" id="register-form">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" class="form-input" placeholder="e.g. Jane Doe" required>
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-input" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-input" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </form>
+
+        <!-- Login Form (Hidden by default) -->
+        <form class="auth-form" id="login-form" style="display: none;">
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-input" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-input" placeholder="••••••••" required>
+            </div>
+            <div style="text-align: right;">
+                <a href="#" class="auth-link">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Log In</button>
+        </form>
+
+        <div class="auth-footer" id="auth-footer-text">
+            <p>Already have an account? <a href="#" id="toggle-auth-mode">Log in</a></p>
         </div>
+        
     </div>
 </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleAuthBtn = document.getElementById('toggle-auth-mode');
+        const registerForm = document.getElementById('register-form');
+        const loginForm = document.getElementById('login-form');
+        const roleToggle = document.getElementById('role-toggle-container');
+        const authTitle = document.getElementById('auth-title');
+        const authSubtitle = document.getElementById('auth-subtitle');
+        const authFooter = document.getElementById('auth-footer-text');
+        
+        let isLogin = false;
+
+        toggleAuthBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            isLogin = !isLogin;
+            
+            if (isLogin) {
+                registerForm.style.display = 'none';
+                roleToggle.style.display = 'none';
+                loginForm.style.display = 'flex';
+                authTitle.textContent = 'Welcome Back';
+                authSubtitle.textContent = 'Log in to your Trazza account.';
+                authFooter.innerHTML = '<p>Don\'t have an account? <a href="#" id="toggle-auth-mode">Sign up</a></p>';
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'flex';
+                roleToggle.style.display = 'flex';
+                authTitle.textContent = 'Create an Account';
+                authSubtitle.textContent = 'Join Trazza today to get started.';
+                authFooter.innerHTML = '<p>Already have an account? <a href="#" id="toggle-auth-mode">Log in</a></p>';
+            }
+            
+            // Re-bind event listener to the new link
+            document.getElementById('toggle-auth-mode').addEventListener('click', arguments.callee);
+        });
+    });
+</script>
 
 <script src="./assets/scripts/main.js"></script>
 <script src="./assets/scripts/i18n.js"></script>
