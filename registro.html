@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="registro.metaTitle">Registro – Trazza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+
+<svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-route" viewBox="0 0 24 24"><path d="M5 19c0-6 14-6 14-13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="5" cy="19" r="2.5" fill="currentColor"/><circle cx="19" cy="5" r="2.5" fill="currentColor"/></symbol>
+</svg>
+
+<main class="auth-page" style="display: flex; justify-content: center; align-items: center;">
+    <div class="auth-card">
+        
+        <div class="auth-lang">
+            <div class="lang-switch" role="group" aria-label="Language">
+                <button type="button" data-lang="en" class="is-active" aria-pressed="true">EN</button>
+                <span aria-hidden="true">|</span>
+                <button type="button" data-lang="es" aria-pressed="false">ES</button>
+            </div>
+        </div>
+
+        <div class="auth-header">
+            <a href="index.html" class="logo" style="justify-content: center;">
+                <span class="logo-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-route"/></svg></span>
+                <span class="logo-text">
+                    <span class="brand">Trazza</span>
+                    <span class="slogan">SMART LOGISTICS</span>
+                </span>
+            </a>
+            <h2 id="auth-title">Create an Account</h2>
+            <p id="auth-subtitle">Join Trazza today to get started.</p>
+        </div>
+
+        <!-- Role Toggle (Only for Register) -->
+        <div class="toggle-container auth-role-toggle" id="role-toggle-container">
+            <button class="toggle-btn active" id="btn-carrier">Carrier</button>
+            <button class="toggle-btn" id="btn-emprendedor">Merchant</button>
+        </div>
+
+        <!-- Register Form -->
+        <form class="auth-form" id="register-form">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" class="form-input" placeholder="e.g. Jane Doe" required>
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-input" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-input" placeholder="••••••••" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+        </form>
+
+        <!-- Login Form (Hidden by default) -->
+        <form class="auth-form" id="login-form" style="display: none;">
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" class="form-input" placeholder="jane@example.com" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-input" placeholder="••••••••" required>
+            </div>
+            <div style="text-align: right;">
+                <a href="#" class="auth-link">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Log In</button>
+        </form>
+
+        <div class="auth-footer" id="auth-footer-text">
+            <p>Already have an account? <a href="#" id="toggle-auth-mode">Log in</a></p>
+        </div>
+        
+    </div>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleAuthBtn = document.getElementById('toggle-auth-mode');
+        const registerForm = document.getElementById('register-form');
+        const loginForm = document.getElementById('login-form');
+        const roleToggle = document.getElementById('role-toggle-container');
+        const authTitle = document.getElementById('auth-title');
+        const authSubtitle = document.getElementById('auth-subtitle');
+        const authFooter = document.getElementById('auth-footer-text');
+        
+        let isLogin = false;
+
+        toggleAuthBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            isLogin = !isLogin;
+            
+            if (isLogin) {
+                registerForm.style.display = 'none';
+                roleToggle.style.display = 'none';
+                loginForm.style.display = 'flex';
+                authTitle.textContent = 'Welcome Back';
+                authSubtitle.textContent = 'Log in to your Trazza account.';
+                authFooter.innerHTML = '<p>Don\'t have an account? <a href="#" id="toggle-auth-mode">Sign up</a></p>';
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'flex';
+                roleToggle.style.display = 'flex';
+                authTitle.textContent = 'Create an Account';
+                authSubtitle.textContent = 'Join Trazza today to get started.';
+                authFooter.innerHTML = '<p>Already have an account? <a href="#" id="toggle-auth-mode">Log in</a></p>';
+            }
+            
+            // Re-bind event listener to the new link
+            document.getElementById('toggle-auth-mode').addEventListener('click', arguments.callee);
+        });
+    });
+</script>
+
+<script src="./assets/scripts/main.js"></script>
+<script src="./assets/scripts/i18n.js"></script>
+</body>
+</html>
