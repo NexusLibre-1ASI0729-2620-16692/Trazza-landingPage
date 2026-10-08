@@ -38,7 +38,7 @@ The site is a static, multilingual (EN/ES) marketing page whose goal is to drive
 
 ---
 
-## 🚀 Getting started
+##  Getting started
 
 ### Prerequisites
 
@@ -81,7 +81,7 @@ Precedence order in `i18n.js`:
 
 ---
 
-## 🌐 Internationalization (EN / ES)
+##  Internationalization (EN / ES)
 
 The site ships with a **zero-dependency i18n engine** in `assets/scripts/i18n.js`.
 
@@ -129,7 +129,7 @@ A `trazza:langchange` event is dispatched on `document` after every switch, so a
 
 ---
 
-## 🧩 Interactive components (`main.js`)
+## Interactive components (`main.js`)
 
 All behavior is progressive-enhancement friendly and scoped by data attributes.
 
@@ -156,3 +156,114 @@ if (role === 'merchant') document.getElementById('btn-emprendedor')?.click();
 - Tabs use `role="tab"` / `role="tabpanel"` with `aria-selected`.
 - The video box is a `<button>` with a descriptive label.
 - `Escape` closes the mobile menu.
+
+
+---
+
+##  Design system
+
+All tokens live in `:root` in `style.css`.
+
+### Brand tokens (excerpt)
+
+```css
+--primary:        #0037B0;  /* Trazza blue */
+--primary-hover:  #002C8F;
+--primary-tint:   #E6EBFF;
+--secondary:      #B54708;  /* Merchant orange */
+--green:          #006C4A;  /* Success / rates */
+--amber:          #8A4B00;  /* Warnings / detours */
+--text-dark:      #131B2E;
+--footer-bg:      #131B2E;
+--font-sans:      'Plus Jakarta Sans', system-ui, sans-serif;
+```
+
+### Typography
+
+Loaded from Google Fonts: **Plus Jakarta Sans** (400 / 500 / 600 / 700).
+
+### Breakpoints
+
+| Breakpoint | Behavior |
+|------------|----------|
+| `> 1240px` | Full desktop layout, horizontal nav |
+| `≤ 1240px` | Nav collapses into a burger menu |
+| `≤ 1024px` | Hero and split sections stack vertically |
+| `≤ 768px`  | Mobile: hidden hero card, cards replace the comparison table, testimonials become a swipe slider, footer flattens |
+
+### Utility classes
+
+`.container`, `.btn` (+ `.btn-primary`, `.btn-secondary`, `.btn-outline`, `.btn-white`), `.chip`, `.icon-box`, `.check-dot`, `.eyebrow`, `.desktop-only`, `.mobile-only`.
+
+---
+
+##  Page sections
+
+`index.html` is organized top-to-bottom in 11 blocks, each anchored for deep links:
+
+| # | Section | Anchor | Purpose |
+|---|---------|--------|---------|
+| 01 | Header / Nav | — | Logo, navigation, language switch, sign-in |
+| 02 | Hero | `#top` | Value prop + load-suggestion card + primary CTAs |
+| 03 | How it works | `#how-it-works` | Tabbed steps for carriers vs. merchants |
+| 04 | For Carriers | `#carriers` | Feature list + CTA to register as carrier |
+| 05 | For Merchants | `#merchants` | Feature list + CTA to register as merchant |
+| 06 | Comparison | `#comparison` | Trazza vs. WhatsApp groups vs. traditional carriers |
+| 07 | Plans | `#plans` | Free vs. Pro, "no commission per trip" promise |
+| 08 | Testimonials | `#testimonials` | Social proof (placeholder quotes) |
+| 09 | Video | `#video` | Lazy-loaded About-the-Product embed |
+| 10 | Final CTA | — | Last conversion push |
+| 11 | Footer | `#contact` | Links, legal, contact, language switch |
+
+---
+
+##  Conventions
+
+### HTML
+
+- Semantic elements (`<header>`, `<main>`, `<section>`, `<article>`, `<footer>`).
+- Inline SVG sprite at the top of `<body>` for icons (`<symbol id="i-*">`).
+- All copy that needs translation carries a `data-i18n*` attribute.
+
+### CSS
+
+- Single stylesheet, organized top-to-bottom: tokens → base → components → sections → responsive.
+- Class naming is **BEM-lite** (`.plan-card--featured`, `.btn-outline`).
+- No preprocessor, no framework.
+
+### JavaScript
+
+- Vanilla ES2020+, no bundler.
+- Each feature is self-contained inside `DOMContentLoaded`.
+- Global namespaces are prefixed: `window.TrazzaI18n`.
+- Custom events use the `trazza:` prefix.
+
+### Git
+
+- Branching follows Git Flow naming: `feature/*`, `release/*`, `hotfix/*`.
+- Commits follow [Conventional Commits](https://www.conventionalcommits.org/):
+    - `feat(scope): ...`
+    - `fix(scope): ...`
+    - `docs(readme): ...`
+    - `chore(repo): ...`
+- Base branch for PRs is **`develop`**.
+- Line endings: **LF** enforced via `.gitattributes`.
+
+---
+
+## 🛣 Roadmap
+
+- [ ] Replace testimonial placeholders (`[Quote from…]`, `[Carrier name]`) with real validated quotes.
+- [ ] Set the real Pro plan price (`plans.pro.price`).
+- [ ] Wire the video `data-video-src` to the final About-the-Product URL.
+- [ ] Point `registro.html` to the real auth backend (Amplify).
+- [ ] Add legal pages: Terms, Privacy, Complaints Book.
+- [ ] Add `sitemap.xml`, `robots.txt`, Open Graph / Twitter meta.
+- [ ] Add favicon and app icons.
+- [ ] Set up CI to lint HTML/CSS/JS on PR.
+
+---
+
+##  License
+
+© 2026 StackRoot · Trazza. All rights reserved.
