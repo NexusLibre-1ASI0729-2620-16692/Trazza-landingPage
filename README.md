@@ -242,10 +242,10 @@ Loaded from Google Fonts: **Plus Jakarta Sans** (400 / 500 / 600 / 700).
 
 - Branching follows Git Flow naming: `feature/*`, `release/*`, `hotfix/*`.
 - Commits follow [Conventional Commits](https://www.conventionalcommits.org/):
-    - `feat(scope): ...`
-    - `fix(scope): ...`
-    - `docs(readme): ...`
-    - `chore(repo): ...`
+  - `feat(scope): ...`
+  - `fix(scope): ...`
+  - `docs(readme): ...`
+  - `chore(repo): ...`
 - Base branch for PRs is **`develop`**.
 - Line endings: **LF** enforced via `.gitattributes`.
 
@@ -266,4 +266,4 @@ Loaded from Google Fonts: **Plus Jakarta Sans** (400 / 500 / 600 / 700).
 
 ##  License
 
-© 2026 StackRoot · Trazza. All rights reserved.
+© 2026 NexusLibre · Trazza. All rights reserved.
