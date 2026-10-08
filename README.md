@@ -1,10 +1,1 @@
 ﻿# Trazza Landing Page
-Landing page for **Trazza**, a plataform that connects carriers returning with space to 
-small and medium bussines, that need to ship goods across Lima.
-
-The site is static, multilingual (EN/ES) marketing page whose goal is to drive isgn-ups for two profiels:
-
--**Carriers** - fill their empty return trips with compatible loads
--**Merchats**- ship goods without a fixed contract, at a lower cost than a dedicated trip.
-
-##Project structure
