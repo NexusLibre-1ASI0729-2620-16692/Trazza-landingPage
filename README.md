@@ -1,1 +1,1 @@
-﻿# Trazza Landing Page
+# Trazza Landing Page
