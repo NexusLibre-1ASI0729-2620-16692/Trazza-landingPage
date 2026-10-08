@@ -1,0 +1,13 @@
+# IDEs / editores
+.idea/
+.vscode/
+*.iml
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencias y logs
+node_modules/
+*.log
